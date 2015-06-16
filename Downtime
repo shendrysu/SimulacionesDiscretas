@@ -1,0 +1,7 @@
+datos<-read.csv("C:/R/datos.csv")
+names(datos) = c("MW","MF","SR000","FR","UC","Dowtime","Reparación")
+datos
+SFR<- subset(datos,select=FR)
+SMF<- subset(datos,select=MF)
+tiempo<-mean(SFR$FR)-mean(SMF$MF)
+tiempo
